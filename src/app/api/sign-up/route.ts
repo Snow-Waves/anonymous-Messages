@@ -71,7 +71,7 @@ export const POST =  async (request: Request) => {
         // sending the verification code to the user email
         const emailResponse = await resendVerifyingMail(email, username, verificationCode);
 
-        console.log("Email response:", emailResponse);
+        // console.log("Email response:", emailResponse);
 
         if (!emailResponse.success) {
             return Response.json({
@@ -81,8 +81,8 @@ export const POST =  async (request: Request) => {
         }
         return Response.json({
                 success: true,
-                message: emailResponse.message,
-            }, { status: 500 });
+                message: 'User registered successfully. Please verify your account.',
+            }, { status: 201 });
 
     }
     catch (error) {

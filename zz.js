@@ -1,10 +1,6 @@
 
 const obj = {
-    name: "Suanmi",
-    age: 25,
-    city: "New York"
+    "username": "lovelyheartbeatslyrics_db_user",
+    "password": "xGJ_fMFj3VaU4q9",
+    "email": "gsydg@g,ail.com",
 }
-
-obj.age = 21; // Update the age property
-
-console.log(obj); // Output: 21

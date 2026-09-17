@@ -17,10 +17,10 @@ async function dbConnect(): Promise<void> {
     try {
         // chech how we were working with env in react. In next env variables are available in process.env. We can access them using process.env.VARIABLE_NAME
         const db = await mongoose.connect(process.env.MONGODB_URI as string);
-        console.log("Database connection successful\n", db );
+        // console.log("Database connection successful\n", db );
         connection.isConnected = db.connections[0].readyState; 
-        console.log("Connections:", db.connection);       
-        console.log("Successfully connected to the database");
+        // console.log("Connections:", db.connection);       
+        console.log("\nSuccessfully connected to the database\n");
 
     } catch (error) {
         console.error("Error connecting to the database", error);  
